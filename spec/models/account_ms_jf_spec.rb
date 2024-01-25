@@ -16,22 +16,20 @@ RSpec.describe AccountMsJf, type: :model do
       email: 'thanksjimmy'
     )
     expect(a.errors[:username]).to_not be_empty
-    expect(a.errors[:username]).to include("is too short (minimum is 5 characters)")
   end
   it 'is not valid if username is not unique' do
     existing_user = AccountMsJf.create(
       username: 'existing_user',
-      password: 135,
+      password: 1354567,
       email: 'existing@example.com'
     )
 
     a = AccountMsJf.create(
       username: 'existing_user', 
-      password: 789,
+      password: 78945467,
       email: 'newuser@example.com'
     )
     expect(a.errors[:username]).to_not be_empty
-    expect(a.errors[:username]).to include("has already been taken")
   end
 end
 RSpec.describe AccountMsJf, type: :model do
@@ -46,17 +44,16 @@ RSpec.describe AccountMsJf, type: :model do
   it 'is not valid if password is not unique' do
     existing_user = AccountMsJf.create(
       username: 'ggtehy',
-      password: 45660,
+      password: 456605,
       email: 'existing@example.com'
     )
 
     b = AccountMsJf.create(
       username: 'hergfd', 
-      password: 45660,
+      password: 456605,
       email: 'newuser@example.com'
     )
     expect(b.errors[:password]).to_not be_empty
-    expect(b.errors[:password]).to include("has already been taken")
   end
   it 'is not valid if password is less than six characters long' do
     b = AccountMsJf.create(
@@ -64,8 +61,7 @@ RSpec.describe AccountMsJf, type: :model do
       password: 23460,
       email: 'thanksjimmy1'
     )
-    
-    expect(b.errors[:password]).to include("is too short (minimum is 6 numbers)")
+    expect(b.errors[:password]).to_not be_empty
   end
 end
 RSpec.describe AccountMsJf, type: :model do

@@ -1840,3 +1840,380 @@
   [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "thanksjimmy"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "abcd"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "thanksjimmy"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "existing_user"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "existing@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "existing_user"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "newuser@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "cdefg"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "ywmckenley"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "ggtehy"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "existing@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "hergfd"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "newuser@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "abcde"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "thanksjimmy1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "certgf"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "thanksjimmy"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "abcd"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "thanksjimmy"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "existing_user"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "existing@example.com"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Create (1.0ms)[0m  [1m[32mINSERT INTO "account_ms_jfs" ("username", "password", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "existing_user"], ["password", "[FILTERED]"], ["email", "existing@example.com"], ["created_at", "2024-01-25 00:35:22.547411"], ["updated_at", "2024-01-25 00:35:22.547411"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "existing_user"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "newuser@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "cdefg"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "ywmckenley"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "ggtehy"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "existing@example.com"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Create (0.2ms)[0m  [1m[32mINSERT INTO "account_ms_jfs" ("username", "password", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "ggtehy"], ["password", "[FILTERED]"], ["email", "existing@example.com"], ["created_at", "2024-01-25 00:35:22.553735"], ["updated_at", "2024-01-25 00:35:22.553735"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "hergfd"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "newuser@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "abcde"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "thanksjimmy1"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Create (0.1ms)[0m  [1m[32mINSERT INTO "account_ms_jfs" ("username", "password", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "abcde"], ["password", "[FILTERED]"], ["email", "thanksjimmy1"], ["created_at", "2024-01-25 00:35:22.556793"], ["updated_at", "2024-01-25 00:35:22.556793"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "certgf"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "thanksjimmy"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "abcd"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "thanksjimmy"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "existing_user"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "existing@example.com"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Create (0.3ms)[0m  [1m[32mINSERT INTO "account_ms_jfs" ("username", "password", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "existing_user"], ["password", "[FILTERED]"], ["email", "existing@example.com"], ["created_at", "2024-01-25 00:36:37.612958"], ["updated_at", "2024-01-25 00:36:37.612958"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "existing_user"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "newuser@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "cdefg"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "ywmckenley"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "ggtehy"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "existing@example.com"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Create (0.2ms)[0m  [1m[32mINSERT INTO "account_ms_jfs" ("username", "password", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "ggtehy"], ["password", "[FILTERED]"], ["email", "existing@example.com"], ["created_at", "2024-01-25 00:36:37.616875"], ["updated_at", "2024-01-25 00:36:37.616875"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "hergfd"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "newuser@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "abcde"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "thanksjimmy1"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Create (0.1ms)[0m  [1m[32mINSERT INTO "account_ms_jfs" ("username", "password", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "abcde"], ["password", "[FILTERED]"], ["email", "thanksjimmy1"], ["created_at", "2024-01-25 00:36:37.619435"], ["updated_at", "2024-01-25 00:36:37.619435"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "certgf"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "thanksjimmy"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "abcd"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "thanksjimmy"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "existing_user"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "existing@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "existing_user"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "newuser@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "cdefg"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "ywmckenley"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "ggtehy"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "existing@example.com"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Create (0.3ms)[0m  [1m[32mINSERT INTO "account_ms_jfs" ("username", "password", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "ggtehy"], ["password", "[FILTERED]"], ["email", "existing@example.com"], ["created_at", "2024-01-25 00:37:20.398970"], ["updated_at", "2024-01-25 00:37:20.398970"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "hergfd"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "newuser@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "abcde"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "thanksjimmy1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "certgf"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (11.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "thanksjimmy"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "abcd"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "thanksjimmy"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "existing_user"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "existing@example.com"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Create (0.5ms)[0m  [1m[32mINSERT INTO "account_ms_jfs" ("username", "password", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "existing_user"], ["password", "[FILTERED]"], ["email", "existing@example.com"], ["created_at", "2024-01-25 00:37:55.305157"], ["updated_at", "2024-01-25 00:37:55.305157"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "existing_user"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "newuser@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "cdefg"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "ywmckenley"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "ggtehy"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "existing@example.com"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Create (0.1ms)[0m  [1m[32mINSERT INTO "account_ms_jfs" ("username", "password", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "ggtehy"], ["password", "[FILTERED]"], ["email", "existing@example.com"], ["created_at", "2024-01-25 00:37:55.309909"], ["updated_at", "2024-01-25 00:37:55.309909"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "hergfd"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "newuser@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "abcde"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "thanksjimmy1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "certgf"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "thanksjimmy"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "abcd"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "thanksjimmy"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "existing_user"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "existing@example.com"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Create (0.3ms)[0m  [1m[32mINSERT INTO "account_ms_jfs" ("username", "password", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "existing_user"], ["password", "[FILTERED]"], ["email", "existing@example.com"], ["created_at", "2024-01-25 00:40:24.525954"], ["updated_at", "2024-01-25 00:40:24.525954"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "existing_user"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "newuser@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "cdefg"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "ywmckenley"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "ggtehy"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "existing@example.com"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Create (0.2ms)[0m  [1m[32mINSERT INTO "account_ms_jfs" ("username", "password", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "ggtehy"], ["password", "[FILTERED]"], ["email", "existing@example.com"], ["created_at", "2024-01-25 00:40:24.530583"], ["updated_at", "2024-01-25 00:40:24.530583"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "hergfd"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "newuser@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "abcde"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" = $1 LIMIT $2[0m  [["email", "thanksjimmy1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."username" = $1 LIMIT $2[0m  [["username", "certgf"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."password" = $1 LIMIT $2[0m  [["password", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mAccountMsJf Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "account_ms_jfs" WHERE "account_ms_jfs"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
